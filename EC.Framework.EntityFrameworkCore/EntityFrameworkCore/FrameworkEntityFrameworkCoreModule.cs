@@ -1,11 +1,15 @@
 ﻿using EC.Framework.Domain;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
+using Volo.Abp.EntityFrameworkCore.PostgreSql;
 using Volo.Abp.Modularity;
 
 namespace EC.Framework.EntityFrameworkCore.EntityFrameworkCore
 {
-    [DependsOn(typeof(FrameworkDomainModule))]
+    [DependsOn(
+        typeof(FrameworkDomainModule),
+        typeof(AbpEntityFrameworkCorePostgreSqlModule)
+        )]
     public class FrameworkEntityFrameworkCoreModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

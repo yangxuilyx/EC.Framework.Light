@@ -15,6 +15,7 @@ namespace EC.Framework.Host
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).UseAutofac();
+                })
+                .UseAutofac();
     }
 }

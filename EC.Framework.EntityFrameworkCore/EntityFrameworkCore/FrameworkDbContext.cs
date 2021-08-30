@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EC.Framework.Domain;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -10,5 +11,7 @@ namespace EC.Framework.EntityFrameworkCore.EntityFrameworkCore
         public FrameworkDbContext(DbContextOptions<FrameworkDbContext> options) : base(options)
         {
         }
+
+        public DbSet<Test> Tests { get; set; }
     }
 }
