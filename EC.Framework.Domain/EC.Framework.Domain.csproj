@@ -5,7 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Localization\Framework\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Framework\zh-Hans.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="4.4.0" />
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="4.4.0" />
+    <PackageReference Include="Volo.Abp.Localization" Version="4.4.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="4.4.0" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@ namespace EC.Framework.Host.Controllers
         // GET
         public IActionResult Index()
         {
-            return Ok("hello");
+            return Redirect("~/swagger");
         }
     }
 }
